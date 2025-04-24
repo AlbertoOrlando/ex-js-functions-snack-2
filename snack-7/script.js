@@ -1,14 +1,12 @@
-function eseguiEFerma(mes, stop, time) {
-    setTimeout(() => {
-        const intervallo = setInterval(() => {
-            console.log(mes);
-        }, 1000);
+function eseguiEFerma(mes, time, stop) {
+    const intervallo = setInterval(() => {
+        console.log(mes);
+    }, time);
 
-        setTimeout(() => {
-            clearInterval(intervallo);
-            console.log("messaggio interrotto");
-        }, stop);
-    }, time)
+    setTimeout(() => {
+        clearInterval(intervallo);
+        console.log("messaggio interrotto");
+    }, stop);
 }
 
-eseguiEFerma("bella", 10000, 1000)
+eseguiEFerma("bella", 1000, 10000)
